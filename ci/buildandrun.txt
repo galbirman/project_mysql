@@ -1,0 +1,6 @@
+docker stop project
+docker rm project
+
+docker build -t project .
+
+docker run --name=project -p 5001:5000 -d project

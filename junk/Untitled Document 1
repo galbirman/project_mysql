@@ -1,0 +1,48 @@
+
+@app.route("/insert")              
+def insert():
+    cur = mysql.connection.cursor()
+    cur.execute(input("Enter query, INSERT : "))
+    mysql.connection.commit()
+    
+    return "DONE!"
+
+@app.route("/select")              
+def select():
+    cur = mysql.connection.cursor()
+    cur.execute(input("Enter query, SELECT : "))
+    mysql.connection.commit()
+    
+    return "DONE!"
+
+@app.route("/time")
+def time():
+    date = datetime.now()
+    return date.strftime("%d/%m/%y, %H:%M")
+    
+
+
+
+
+
+# input("Enter query: ")
+
+
+
+
+
+
+return "DONE!"
+    
+@app.route("/create")              
+def create(): 	
+    create_query = input("Enter query, CREATE : ")
+    mydb.connection.cursor() as cursor:
+    cursor.execute(create_query)
+except Error as e:
+    print(e)
+    
+    cur = mysql.connection.cursor()
+    cur.execute(input("Enter query, CREATE : "))
+    
+    return "DONE!"
